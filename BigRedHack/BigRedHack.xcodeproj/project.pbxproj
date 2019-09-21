@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6FFCB9A2335C75A00FDCB9F /* AddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FFCB992335C75A00FDCB9F /* AddVC.swift */; };
+		A6FFCB9C2335D99600FDCB9F /* RecordWhistleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FFCB9B2335D99600FDCB9F /* RecordWhistleViewController.swift */; };
 		FC2A9D582335A55D00CC0F80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A9D572335A55D00CC0F80 /* AppDelegate.swift */; };
 		FC2A9D5A2335A55D00CC0F80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A9D592335A55D00CC0F80 /* ViewController.swift */; };
 		FC2A9D5D2335A55D00CC0F80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2A9D5B2335A55D00CC0F80 /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A6FFCB992335C75A00FDCB9F /* AddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVC.swift; sourceTree = "<group>"; };
+		A6FFCB9B2335D99600FDCB9F /* RecordWhistleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordWhistleViewController.swift; sourceTree = "<group>"; };
 		FC2A9D542335A55D00CC0F80 /* BigRedHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BigRedHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2A9D572335A55D00CC0F80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC2A9D592335A55D00CC0F80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 			children = (
 				FC2A9D592335A55D00CC0F80 /* ViewController.swift */,
 				FC2A9D6B2335A76300CC0F80 /* CollectionViewCell.swift */,
+				A6FFCB992335C75A00FDCB9F /* AddVC.swift */,
+				A6FFCB9B2335D99600FDCB9F /* RecordWhistleViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -160,6 +166,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6FFCB9C2335D99600FDCB9F /* RecordWhistleViewController.swift in Sources */,
+				A6FFCB9A2335C75A00FDCB9F /* AddVC.swift in Sources */,
 				FC2A9D6E2335AA3E00CC0F80 /* User.swift in Sources */,
 				FC2A9D5A2335A55D00CC0F80 /* ViewController.swift in Sources */,
 				FC2A9D582335A55D00CC0F80 /* AppDelegate.swift in Sources */,

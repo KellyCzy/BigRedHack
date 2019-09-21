@@ -56,7 +56,9 @@ class ViewController: UIViewController {
     }
     
     @objc func add() {
-        
+        let navViewController = AddVC()
+        //navViewController.delegate = self
+        navigationController?.pushViewController(navViewController, animated: true)
     }
 
 }

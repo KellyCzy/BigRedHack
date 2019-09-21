@@ -6,4 +6,22 @@
 //  Copyright © 2019 myl142857. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+
+class AddVC: UIViewController {
+    
+    var navItem: UIBarButtonItem!
+    
+    override func viewDidLoad() {
+        title = "What's that Whistle?"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addWhistle))
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: nil, action: nil)
+    }
+    
+    @objc func addWhistle() {
+        let vc = RecordWhistleViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+}
