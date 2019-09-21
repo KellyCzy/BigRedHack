@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import FirebaseStorage
 
 class RecordWhistleViewController: UIViewController, AVAudioRecorderDelegate {
     
@@ -18,6 +19,10 @@ class RecordWhistleViewController: UIViewController, AVAudioRecorderDelegate {
     var recordingSession: AVAudioSession!
     var whistleRecorder: AVAudioRecorder!
 
+    // What happen next is not what a pragmatic programmer
+    var audioURL: URL!
+    //
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -100,7 +105,7 @@ class RecordWhistleViewController: UIViewController, AVAudioRecorderDelegate {
         recordButton.setTitle("Tap to Stop", for: .normal)
         
         // 3
-        let audioURL = RecordWhistleViewController.getWhistleURL()
+        audioURL = RecordWhistleViewController.getWhistleURL()
         print(audioURL.absoluteString)
         
         // 4
@@ -140,7 +145,28 @@ class RecordWhistleViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @objc func nextTapped() {
+//        navigationController?.pushViewController(TestFirebaseStorageViewController(), animated: true)
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        var dogRef = storageRef.child("images/audio")
+//        var localFile = URL(fileURLWithPath: Bundle.main.path(forResource: "dog", ofType: "jpg")!)
+        var localFile = audioURL!
         
+        let uploadTask = dogRef.putFile(from: localFile, metadata: nil) { metadata, error in
+            guard let metadata = metadata else {
+                // Uh-oh, an error occurred!
+                return
+            }
+            // Metadata contains file metadata such as size, content-type.
+            let size = metadata.size
+            // You can also access to download URL after upload.
+            storageRef.downloadURL { (url, error) in
+                guard let downloadURL = url else {
+                    // Uh-oh, an error occurred!
+                    return
+                }
+            }
+        }
     }
     
     @objc func recordTapped() {

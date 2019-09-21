@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A6FFCB9A2335C75A00FDCB9F /* AddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FFCB992335C75A00FDCB9F /* AddVC.swift */; };
 		A6FFCB9C2335D99600FDCB9F /* RecordWhistleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FFCB9B2335D99600FDCB9F /* RecordWhistleViewController.swift */; };
+		F4270203155E23148D16F11E /* Pods_BigRedHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979C8045FE3A7F2814B55252 /* Pods_BigRedHack.framework */; };
 		FC2A9D582335A55D00CC0F80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A9D572335A55D00CC0F80 /* AppDelegate.swift */; };
 		FC2A9D5A2335A55D00CC0F80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A9D592335A55D00CC0F80 /* ViewController.swift */; };
 		FC2A9D5D2335A55D00CC0F80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2A9D5B2335A55D00CC0F80 /* Main.storyboard */; };
@@ -17,11 +18,18 @@
 		FC2A9D6C2335A76300CC0F80 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A9D6B2335A76300CC0F80 /* CollectionViewCell.swift */; };
 		FC2A9D6E2335AA3E00CC0F80 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A9D6D2335AA3E00CC0F80 /* User.swift */; };
 		FC2A9D702335AA6800CC0F80 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A9D6F2335AA6800CC0F80 /* Audio.swift */; };
+		FC2A9D762335F0E300CC0F80 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A9D752335F0E300CC0F80 /* SignInViewController.swift */; };
+		FC2A9D782335FBC000CC0F80 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC2A9D772335FBBD00CC0F80 /* GoogleService-Info.plist */; };
+		FC2A9D7E233602ED00CC0F80 /* TestFirebaseStorageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2A9D7D233602ED00CC0F80 /* TestFirebaseStorageViewController.swift */; };
+		FC2A9D84233605EF00CC0F80 /* dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC2A9D83233605EF00CC0F80 /* dog.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D786F12CDBBB3C7B9F47B14 /* Pods-BigRedHack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigRedHack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BigRedHack/Pods-BigRedHack.debug.xcconfig"; sourceTree = "<group>"; };
+		979C8045FE3A7F2814B55252 /* Pods_BigRedHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BigRedHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6FFCB992335C75A00FDCB9F /* AddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVC.swift; sourceTree = "<group>"; };
 		A6FFCB9B2335D99600FDCB9F /* RecordWhistleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordWhistleViewController.swift; sourceTree = "<group>"; };
+		C0A60D676D6CC363101C53EC /* Pods-BigRedHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigRedHack.release.xcconfig"; path = "Pods/Target Support Files/Pods-BigRedHack/Pods-BigRedHack.release.xcconfig"; sourceTree = "<group>"; };
 		FC2A9D542335A55D00CC0F80 /* BigRedHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BigRedHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2A9D572335A55D00CC0F80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC2A9D592335A55D00CC0F80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +40,10 @@
 		FC2A9D6B2335A76300CC0F80 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		FC2A9D6D2335AA3E00CC0F80 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FC2A9D6F2335AA6800CC0F80 /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
+		FC2A9D752335F0E300CC0F80 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = ../SignInViewController.swift; sourceTree = "<group>"; };
+		FC2A9D772335FBBD00CC0F80 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FC2A9D7D233602ED00CC0F80 /* TestFirebaseStorageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFirebaseStorageViewController.swift; sourceTree = "<group>"; };
+		FC2A9D83233605EF00CC0F80 /* dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +51,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4270203155E23148D16F11E /* Pods_BigRedHack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D7064AF20FE54E6853CE91F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				979C8045FE3A7F2814B55252 /* Pods_BigRedHack.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D9F473E50BAB2A5B48C50DA8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D786F12CDBBB3C7B9F47B14 /* Pods-BigRedHack.debug.xcconfig */,
+				C0A60D676D6CC363101C53EC /* Pods-BigRedHack.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FC2A9D4B2335A55D00CC0F80 = {
 			isa = PBXGroup;
 			children = (
 				FC2A9D562335A55D00CC0F80 /* BigRedHack */,
 				FC2A9D552335A55D00CC0F80 /* Products */,
+				D9F473E50BAB2A5B48C50DA8 /* Pods */,
+				D7064AF20FE54E6853CE91F9 /* Frameworks */,
+				FC2A9D822336055900CC0F80 /* images */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +97,7 @@
 		FC2A9D562335A55D00CC0F80 /* BigRedHack */ = {
 			isa = PBXGroup;
 			children = (
+				FC2A9D772335FBBD00CC0F80 /* GoogleService-Info.plist */,
 				FC2A9D572335A55D00CC0F80 /* AppDelegate.swift */,
 				FC2A9D712335AA7300CC0F80 /* ViewControllers */,
 				FC2A9D722335AA9700CC0F80 /* Models */,
@@ -78,10 +112,12 @@
 		FC2A9D712335AA7300CC0F80 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FC2A9D752335F0E300CC0F80 /* SignInViewController.swift */,
 				FC2A9D592335A55D00CC0F80 /* ViewController.swift */,
 				FC2A9D6B2335A76300CC0F80 /* CollectionViewCell.swift */,
 				A6FFCB992335C75A00FDCB9F /* AddVC.swift */,
 				A6FFCB9B2335D99600FDCB9F /* RecordWhistleViewController.swift */,
+				FC2A9D7D233602ED00CC0F80 /* TestFirebaseStorageViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -95,6 +131,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		FC2A9D822336055900CC0F80 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				FC2A9D83233605EF00CC0F80 /* dog.jpg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,9 +146,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC2A9D662335A56A00CC0F80 /* Build configuration list for PBXNativeTarget "BigRedHack" */;
 			buildPhases = (
+				BCAE052E325A5570E79052CE /* [CP] Check Pods Manifest.lock */,
 				FC2A9D502335A55D00CC0F80 /* Sources */,
 				FC2A9D512335A55D00CC0F80 /* Frameworks */,
 				FC2A9D522335A55D00CC0F80 /* Resources */,
+				338AF1E06763D2282E2401E4 /* [CP] Embed Pods Frameworks */,
+				BE7136298014B06086DFE6E5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -154,22 +201,103 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC2A9D622335A56A00CC0F80 /* LaunchScreen.storyboard in Resources */,
+				FC2A9D84233605EF00CC0F80 /* dog.jpg in Resources */,
 				FC2A9D5F2335A56A00CC0F80 /* Assets.xcassets in Resources */,
+				FC2A9D782335FBC000CC0F80 /* GoogleService-Info.plist in Resources */,
 				FC2A9D5D2335A55D00CC0F80 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		338AF1E06763D2282E2401E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BigRedHack/Pods-BigRedHack-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BigRedHack/Pods-BigRedHack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCAE052E325A5570E79052CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BigRedHack-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE7136298014B06086DFE6E5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BigRedHack/Pods-BigRedHack-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BigRedHack/Pods-BigRedHack-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FC2A9D502335A55D00CC0F80 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC2A9D7E233602ED00CC0F80 /* TestFirebaseStorageViewController.swift in Sources */,
 				A6FFCB9C2335D99600FDCB9F /* RecordWhistleViewController.swift in Sources */,
 				A6FFCB9A2335C75A00FDCB9F /* AddVC.swift in Sources */,
 				FC2A9D6E2335AA3E00CC0F80 /* User.swift in Sources */,
 				FC2A9D5A2335A55D00CC0F80 /* ViewController.swift in Sources */,
+				FC2A9D762335F0E300CC0F80 /* SignInViewController.swift in Sources */,
 				FC2A9D582335A55D00CC0F80 /* AppDelegate.swift in Sources */,
 				FC2A9D6C2335A76300CC0F80 /* CollectionViewCell.swift in Sources */,
 				FC2A9D702335AA6800CC0F80 /* Audio.swift in Sources */,
@@ -316,16 +444,18 @@
 		};
 		FC2A9D672335A56A00CC0F80 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D786F12CDBBB3C7B9F47B14 /* Pods-BigRedHack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UL3P7FR3FP;
 				INFOPLIST_FILE = BigRedHack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.5iduoduo.BigRedHack;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigredhack-2019";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -334,16 +464,18 @@
 		};
 		FC2A9D682335A56A00CC0F80 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0A60D676D6CC363101C53EC /* Pods-BigRedHack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UL3P7FR3FP;
 				INFOPLIST_FILE = BigRedHack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.5iduoduo.BigRedHack;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigredhack-2019";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
