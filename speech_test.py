@@ -1,5 +1,5 @@
-filepath = "/Users/KellyC/Desktop/"
-output_filepath = "/Users/KellyC/Desktop/"
+filepath = "gs://bigredhack-41367.appspot.com/"
+output_filepath = "gs://bigredhack-41367.appspot.com/"
 bucketname = "brh"
 
 # Import libraries
@@ -31,7 +31,6 @@ def frame_rate_channel(audio_file_name):
         return frame_rate,channels
 
 def upload_blob(bucket_name, source_file_name, destination_blob_name):
-    """Uploads a file to the bucket."""
     storage_client = storage.Client()
     bucket = storage_client.get_bucket(bucket_name)
     blob = bucket.blob(destination_blob_name)
@@ -39,7 +38,6 @@ def upload_blob(bucket_name, source_file_name, destination_blob_name):
     blob.upload_from_filename(source_file_name)
 
 def delete_blob(bucket_name, blob_name):
-    """Deletes a blob from the bucket."""
     storage_client = storage.Client()
     bucket = storage_client.get_bucket(bucket_name)
     blob = bucket.blob(blob_name)
@@ -51,9 +49,6 @@ def google_transcribe(audio_file_name):
     file_name = filepath + audio_file_name
     file_name = m4a_to_wav(file_name)
     audio_file_name = audio_file_name.split('.')[0] + '.wav'
-
-    # The name of the audio file to transcribe
-    print(file_name)
     
     frame_rate, channels = frame_rate_channel(file_name)
     
@@ -67,7 +62,6 @@ def google_transcribe(audio_file_name):
     upload_blob(bucket_name, source_file_name, destination_blob_name)
     
     gcs_uri = 'gs://' + bucketname + '/' + audio_file_name
-    #gcs_uri = file_name
     transcript = ''
 
     client = speech.SpeechClient()
@@ -80,20 +74,26 @@ def google_transcribe(audio_file_name):
 
     # Detects speech in the audio file
     response = client.recognize(config, audio)
-    #response = operation.result(timeout=10000)
 
     for result in response.results:
         transcript += result.alternatives[0].transcript
+
+    delete_blob(bucket_name, destination_blob_name)
+
+    transcript_filename = audio_file_name.split('.')[0] + '.txt'
+    write_transcripts(transcript_filename,transcript)
     
-    return transcript
+    return filepath + transcript_filename
 
 def write_transcripts(transcript_filename,transcript):
     f= open(output_filepath + transcript_filename,"w+")
     f.write(transcript)
     f.close()
 
-if __name__ == '__main__':
-	audio_file_name = "2.m4a"
-	transcript = google_transcribe(audio_file_name)
-	transcript_filename = audio_file_name.split('.')[0] + '.txt'
-	write_transcripts(transcript_filename,transcript)
+    upload_blob(bucketname, output_filepath + transcript_filename, transcript_filename)
+
+# if __name__ == '__main__':
+# 	audio_file_name = "1.m4a"
+# 	transcript = google_transcribe(audio_file_name)
+# 	transcript_filename = audio_file_name.split('.')[0] + '.txt'
+# 	write_transcripts(transcript_filename,transcript)
