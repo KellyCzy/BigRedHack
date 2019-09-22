@@ -14,3 +14,4 @@
 
 # Introduction
 * It is an app that turns a voice recording, uploaded by the user or directly recorded in our app, into a summary by using Google Could’s products and present to the user the categories, semantics, and keywords of this voice message.
+* It incorporates Google Firebase, Google Cloud Speech to Text API, Google NLP API and so on.
