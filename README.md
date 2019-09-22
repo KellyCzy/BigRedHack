@@ -13,3 +13,4 @@
 * "Siyang Yu" <sy372@cornell.edu>
 
 # Introduction
+* It turns a voice recording that either is uploaded by the user or directly recorded in our app into a summary by using Google Could’s products and present to users the categories, semantics, and keywords of this voice message.
