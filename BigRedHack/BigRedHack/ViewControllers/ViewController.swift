@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     let reuseIdentifier = "collectionViewReuseIdentifier"
     let padding: CGFloat = 10
-    let cellHeight: CGFloat = 50
+    let cellHeight: CGFloat = 60
     
     var audioArray: [Audio] = []
     
@@ -23,6 +23,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = .white
+        
+        
         title = "Audios"
         
         let flowLayout = UICollectionViewFlowLayout()
@@ -30,18 +32,22 @@ class ViewController: UIViewController {
         flowLayout.minimumInteritemSpacing = padding
         flowLayout.minimumLineSpacing = padding
         
+        flowLayout.sectionInset = UIEdgeInsets(top: 0,left: 10,bottom: 0,right: 10)
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView.backgroundColor! = UIColor(red: 221/255, green: 239/255, blue: 255/255, alpha: 1)
+        
         view.addSubview(collectionView)
         
         addBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(add))
         navigationItem.rightBarButtonItem = addBarButtonItem
         
-        var portal = Audio(audioName: "Portal", url: "www.cornell.edu", summary: "Captain America is so cute!")
-        audioArray = [portal, portal, portal, portal, portal, portal, portal, portal, portal, portal, portal, portal]
+        var portal = Audio(audioName: "Recording", url: "www.cornell.edu", summary: "Captain America is so cute!")
+        audioArray = [portal,portal]
         
         setupConstraints()
     }
@@ -56,7 +62,7 @@ class ViewController: UIViewController {
     }
     
     @objc func add() {
-        let navViewController = AddVC()
+        let navViewController = RecordWhistleViewController()
         //navViewController.delegate = self
         navigationController?.pushViewController(navViewController, animated: true)
     }
@@ -85,7 +91,7 @@ extension ViewController: UICollectionViewDataSource {
 
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (collectionView.frame.width - 2 * padding)
+        let width = (collectionView.frame.width - 3 * padding)
         let height = cellHeight
         return CGSize(width: width, height: cellHeight)
     }

@@ -18,6 +18,9 @@ class CollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         
         contentView.backgroundColor = .white
+        self.contentView.layer.cornerRadius = 10
+        self.layer.cornerRadius = 10
+        self.contentView.layer.masksToBounds = true
         
         nameLabel = UILabel()
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -31,8 +34,8 @@ class CollectionViewCell: UICollectionViewCell {
     func setupConstraints() {
         NSLayoutConstraint.activate([
             nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
-            nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            nameLabel.heightAnchor.constraint(equalToConstant: 50)
+            nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            nameLabel.heightAnchor.constraint(equalToConstant: 60)
             ])
         
         super.updateConstraints()

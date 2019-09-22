@@ -15,15 +15,24 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
     var signInButton: GIDSignInButton!
     
     let verticalSpace: CGFloat = 125
-    let appName = "Happy place happy place!"
+    var iconLabel:UIImageView!
+    let appName = "Recorsum"
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = UIColor(red: 221/255, green: 239/255, blue: 255/255, alpha: 1)
+        
         // Do any additional setup after loading the view.
-        view.backgroundColor = .white
+        //view.backgroundColor = .white
         
         GIDSignIn.sharedInstance()?.uiDelegate = self
+        
+        iconLabel = UIImageView(frame: .zero)
+        iconLabel.contentMode = .scaleAspectFit
+        iconLabel.image = UIImage(named: "icon")
+        iconLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(iconLabel)
         
         appNameLabel = UILabel()
         appNameLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -40,6 +49,13 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
     }
     
     func setupConstraints() {
+        
+        NSLayoutConstraint.activate([
+        iconLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        iconLabel.widthAnchor.constraint(equalToConstant: 100),
+        iconLabel.bottomAnchor.constraint(equalTo: signInButton.topAnchor, constant: -60)
+        ])
+        
         NSLayoutConstraint.activate([
             appNameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             appNameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),

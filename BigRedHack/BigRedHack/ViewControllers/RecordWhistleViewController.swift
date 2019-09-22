@@ -167,6 +167,8 @@ class RecordWhistleViewController: UIViewController, AVAudioRecorderDelegate {
                 }
             }
         }
+        
+        navigationController?.popToRootViewController(animated: true)
     }
     
     @objc func recordTapped() {
