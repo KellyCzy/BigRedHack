@@ -1,4 +1,4 @@
-# BigRedHack @ Cornell University
+# BigRedHack @ Cornell University ---- Recorsum
  2019 Cornell Hackathon Sep20-22th
 
 # Table of Contents
