@@ -11,9 +11,9 @@ import Foundation
 class Audio {
     var audioName: String!
     var url: String!
-    var summary: String!
+    var summary: [Data]!
     
-    init(audioName: String, url: String, summary: String) {
+    init(audioName: String, url: String, summary: [Data]) {
         self.audioName = audioName
         self.url = url
         self.summary = summary

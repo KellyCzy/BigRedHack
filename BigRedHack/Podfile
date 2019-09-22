@@ -9,5 +9,6 @@ target 'BigRedHack' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Storage'
   pod 'GoogleSignIn'
+  pod 'Alamofire'
 
 end

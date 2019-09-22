@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     let padding: CGFloat = 10
     let cellHeight: CGFloat = 60
     
-    var audioArray: [Audio] = []
+    weak var delegate: PassIndexDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,8 +46,9 @@ class ViewController: UIViewController {
         addBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(add))
         navigationItem.rightBarButtonItem = addBarButtonItem
         
-        var portal = Audio(audioName: "Recording", url: "www.cornell.edu", summary: "Captain America is so cute!")
-        audioArray = [portal,portal]
+        var portal = Audio(audioName: "Recording", url: "www.cornell.edu", summary: [Data(dataType: "Category", text: "Computer Science, Cornell"), Data(dataType: "Attitude", text: "Happy"), Data(dataType: "Keyword", text: "hard, prelim")])
+        
+        SystemStorage.audioArray = [portal, portal]
         
         setupConstraints()
     }
@@ -70,17 +71,23 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UICollectionViewDelegate {
-
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let summaryVC = SummaryVC()
+        navigationController?.pushViewController(summaryVC, animated: true)
+        self.delegate = summaryVC as! PassIndexDelegate
+        delegate.configure(index: indexPath.item)
+    }
+    
 }
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return audioArray.count
+        return SystemStorage.audioArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionViewCell
-        let audio = audioArray[indexPath.item]
+        let audio = SystemStorage.audioArray[indexPath.item]
         cell.configure(audio: audio)
         cell.setNeedsUpdateConstraints()
         return cell

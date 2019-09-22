@@ -145,14 +145,14 @@ class RecordWhistleViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @objc func nextTapped() {
-//        navigationController?.pushViewController(TestFirebaseStorageViewController(), animated: true)
         let storage = Storage.storage()
         let storageRef = storage.reference()
-        var dogRef = storageRef.child("images/audio")
+        let localFile = audioURL!
+        let fileURL = "audios/\(localFile.absoluteString)"
+        var audioRef = storageRef.child(fileURL)
 //        var localFile = URL(fileURLWithPath: Bundle.main.path(forResource: "dog", ofType: "jpg")!)
-        var localFile = audioURL!
         
-        let uploadTask = dogRef.putFile(from: localFile, metadata: nil) { metadata, error in
+        let uploadTask = audioRef.putFile(from: localFile, metadata: nil) { metadata, error in
             guard let metadata = metadata else {
                 // Uh-oh, an error occurred!
                 return
@@ -166,6 +166,16 @@ class RecordWhistleViewController: UIViewController, AVAudioRecorderDelegate {
                     return
                 }
             }
+        }
+        
+        NetworkManager.doWork(fileURL: fileURL) { (data) in
+            for i in data {
+                print(i.dataType)
+                print(i.text)
+            }
+            var newAudio = Audio(audioName: "Default", url: fileURL, summary: data)
+            SystemStorage.audioArray.append(newAudio)
+            
         }
         
         navigationController?.popToRootViewController(animated: true)
