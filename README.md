@@ -4,7 +4,7 @@
 # Table of Contents
 
 * [Team Members](#team-members)
-* [Introduction]
+* [Introduction](#introduction)
 
 # <a name="team-members"></a>Team Members
 * "Ziyao Cheng" <zc96@cornell.edu>
